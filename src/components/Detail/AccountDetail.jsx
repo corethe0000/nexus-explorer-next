@@ -31,6 +31,7 @@ import RegisterHistory from './RegisterHistory';
 import ExportButton from './ExportButton';
 import StakingRewards from './StakingRewards';
 import WatchButton from './WatchButton';
+import WalletSend from './WalletSend';
 import Link from 'next/link';
 import { ownerInfo, registerIdFromAddress } from 'utils/address';
 import { userHref } from 'utils/search';
@@ -451,6 +452,13 @@ export default function AccountDetail({ type, data, username, lookupName }) {
                 kind={watchKind}
                 label={lookupName || title}
               />
+              {isAccount && (
+                <WalletSend
+                  address={data.address}
+                  token={data.token}
+                  ticker={ticker}
+                />
+              )}
               <div className={styles.qr} title="Address QR code">
                 <QRCode
                   value={data.address}

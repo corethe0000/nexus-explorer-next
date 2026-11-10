@@ -21,6 +21,12 @@
   }
 }
 
+.navEnd {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .searchBar {
   width: 100%;
   max-width: 46rem;

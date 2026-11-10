@@ -566,3 +566,39 @@
     text-decoration: underline;
   }
 }
+
+.walletSend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  max-width: 22rem;
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.875rem;
+    color: var(--c-ink-2);
+  }
+  input {
+    width: 7rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-ctl);
+    background: var(--c-surface);
+    color: var(--c-ink);
+    font: inherit;
+  }
+}
+
+.walletNote,
+.walletError {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.walletError {
+  color: var(--c-down);
+}

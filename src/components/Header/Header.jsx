@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { NETWORKS } from 'types/ConstantsTypes';
 import { useAppContext } from 'contexts/AppContext';
 import Brand from './Brand';
+import WalletButton from './WalletButton/WalletButton';
 import { DesktopNavbar, Hamburger, MobileMenu } from './Navbar';
 import { useQuery } from 'react-query';
 import { useNetwork } from 'hooks/useNetwork/useNetwork';
@@ -113,7 +114,10 @@ export const Header = () => {
               network={appContext.network.name}
               onNetworkChange={handleNetworkChange}
             />
-            <Hamburger onClick={handleMenuToggle} />
+            <div className={styles.navEnd}>
+              <WalletButton />
+              <Hamburger onClick={handleMenuToggle} />
+            </div>
           </div>
           <div className={styles.searchBar}>
             <Search
