@@ -52,6 +52,11 @@ const ENDPOINTS = [
     'Value moves of all accounts, trust accounts and tokens of one signature chain.',
   ],
   [
+    '/explorer/incoming?addr&genesis&limit&before',
+    `/explorer/incoming?addr=${ACCOUNT}&genesis=${GENESIS}&limit=5`,
+    'What was sent to a wallet, newest first: payments to its accounts (addr, up to 20) and assets or invoices transferred to its profile (genesis); used by wallets that hold no login on a node. transfers = false while the index has no recipients yet.',
+  ],
+  [
     '/explorer/user/<username>',
     '/explorer/user/nirachill',
     'The signature chain of a username, or null.',
